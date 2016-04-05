@@ -1,0 +1,8 @@
+body {
+  background-color: whitesmoke;
+}
+.nav button, .nav li a {
+  line-height: 2.5em;
+  min-width: 170px;
+  font-weight: 200;
+}

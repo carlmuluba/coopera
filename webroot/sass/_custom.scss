@@ -1,0 +1,108 @@
+// Your custom SCSS should be written here...
+
+
+.quicksand {
+    font-family: quicksand, Helvetica, Arial, Geneva, sans-serif
+} 
+
+
+.museo-slab {
+    font-family: museo-slab, Helvetica, Arial, Geneva, sans-serif
+}
+
+html,
+body {
+    font-family: source-sans-pro, Helvetica, Arial, Geneva, sans-serif;
+    font-size: 18px;
+    line-height: 2;
+    color: #2b2b2d
+}
+.main-header{
+  min-height: 550px;
+}
+.container{
+  margin: 0;
+  width: 100%;
+  min-height: 550px
+}
+.main-header .container {
+  background: url('../img/fresh-lime.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom, center;
+  background-size: cover;
+}
+.main-header .container .inner {
+  width: 100%;
+  min-height: 550px;
+  top: 0px;
+  background: url('../img/point.png');
+  background-repeat: repeat;
+  background-position: top, left;
+}
+.main-header .container h1 {
+  margin-top: 100px;
+  text-align: center;
+  color: #477400;
+  font-size: 6em;
+  text-shadow: 1px 1px 0px #F0F0F1
+}
+.main-header .container p {
+  text-align: center;
+  //color: #477400;
+  font-size: 2.5em;
+  background:  rgba(242, 241, 240, .5); //#F0F0F1;
+}
+
+
+section {
+  @include row();
+  width: 100%;
+	max-width: 1280px; //$row-max-width + 40px;
+	min-width: $min-device-width;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	.row {
+		min-width: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+article {
+  @include column(10);
+}
+aside {
+  @include column(2);
+}
+
+
+#product-container li.product {
+  @include fancytiles(4,2,1);
+  min-height: 300px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.box {
+    background: #f5f5f5;
+    color: #5a5a5a;
+    //border: 1px solid #ddd;
+    //-o-border-radius: 4px;
+    //border-radius: 4px
+}
+
+    .truncate {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis
+    }
+        .box p {
+            padding-left: 10px;
+            padding-right: 10px
+        }
+
+            .box img {
+                padding: 0;
+                margin: -16px 0 15px
+
+            }

@@ -1,0 +1,234 @@
+/*
+We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
+However, this blank file is available if you prefer
+*/
+
+@font-face {
+    font-family: source-sans-pro;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/sourcesanspro-regular-webfont.eot);
+    src: url(../fonts/sourcesanspro-regular-webfont.eot#iefix) format("embedded-opentype"), url(../fonts/sourcesanspro-regular-webfont.woff) format("woff"), url(../fonts/sourcesanspro-regular-webfont.ttf) format("truetype"), url(../fonts/sourcesanspro-regular-webfont.svg#source-sans-pro) format("svg")
+}
+
+.source-sans-pro,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: source-sans-pro, Helvetica, Arial, Geneva, sans-serif
+}
+
+@font-face {
+    font-family: museo-slab;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/museo-slab-500-webfont.eot);
+    src: url(../fonts/museo-slab-500-webfont.eot#iefix) format("embedded-opentype"), url(../fonts/museo-slab-500-webfont.woff) format("woff"), url(../fonts/museo-slab-500-webfont.ttf) format("truetype"), url(../fonts/museo-slab-500-webfont.svg#museo-slab) format("svg")
+}
+
+.museo-slab {
+    font-family: museo-slab, Helvetica, Arial, Geneva, sans-serif
+}
+
+@font-face {
+    font-family: quicksand;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/quicksand-regular-webfont.eot);
+    src: url(../fonts/quicksand-regular-webfont.eot#iefix) format("embedded-opentype"), url(../fonts/quicksand-regular-webfont.woff) format("woff"), url(../fonts/quicksand-regular-webfont.ttf) format("truetype"), url(../fonts/quicksand-regular-webfont.svg#quicksand) format("svg")
+}
+
+.quicksand {
+    font-family: quicksand, Helvetica, Arial, Geneva, sans-serif
+}
+
+
+html,
+body {
+    font-family: source-sans-pro, Helvetica, Arial, Geneva, sans-serif;
+    font-size: 18px;
+    line-height: 2;
+    color: #2b2b2d
+}
+.main-header{
+  min-height: 350px;
+}
+
+// This will create a product grid that is
+// 4 columns on desktop, 2 on tablets, and
+// 1 column on mobile devices.
+
+#product-grid-container li.product {
+  @include fancytiles(4,2,1);
+  min-height: 300px;
+  height: auto;
+}
+
+// 4 columns on desktop, 2 at 600px and,
+// 1 column on mobile devices
+#my-different-grid-container li.product {
+  @include fancytiles(4,2,1, $min-device-width, '600px', $row-max-width);
+  min-height: 300px;
+  height: auto;
+}
+
+.box {
+    background: lightgrey;
+    color: #5a5a5a;
+    border: 1px solid #ddd;
+    -o-border-radius: 4px;
+    border-radius: 4px
+}
+
+.box a {
+    color: inherit
+}
+
+.box.small {
+    font-size: .8em
+}
+
+.box.medium {
+    font-size: 1em
+}
+
+.box.large {
+    font-size: 1.5em
+}
+
+.box.square {
+    -o-border-radius: 0;
+    border-radius: 0
+}
+
+.box.round {
+    -o-border-radius: 9999em;
+    border-radius: 9999em
+}
+
+.box.info {
+    background-color: #d9edf7;
+    color: #3a87ad;
+    border-color: #bce8f1
+}
+
+.box.question {
+    background-color: #f0e6f4;
+    color: #9855b4;
+    border-color: #f1dbfa
+}
+
+.box.alert {
+    background-color: #fcf8e3;
+    color: #c09853;
+    border-color: #fbeee0
+}
+
+.box.warning {
+    background: #ffe5c7;
+    color: #ff971e;
+    border-color: #ffdbb3
+}
+
+.box.error {
+    background: #f2dede;
+    color: #b94a48;
+    border-color: #eed3d7
+}
+
+.box.success {
+    background: #dff0d8;
+    color: #468847;
+    border-color: #d6e9c6
+}
+
+.box.green {
+    border-color: #2ecc71;
+    background-color: #54d98c;
+    color: #fff
+}
+
+.box.blue {
+    border-color: #3498db;
+    background-color: #5faee3;
+    color: #fff
+}
+
+.box.purple {
+    border-color: #9b59b6;
+    background-color: #b07cc6;
+    color: #fff
+}
+
+.box.yellow {
+    border-color: #f1c40f;
+    background-color: #f4d03f;
+    color: #fff
+}
+
+.box.orange {
+    border-color: #e67e22;
+    background-color: #eb9950;
+    color: #fff
+}
+
+.box.red {
+    border-color: #e74c3c;
+    background-color: #ed7669;
+    color: #fff
+}
+
+.box.pink {
+    border-color: #f02475;
+    background-color: #f35493;
+    color: #fff
+}
+
+.box.turquoise {
+    border-color: #1abc9c;
+    background-color: #28e1bd;
+    color: #fff
+}
+
+.box.asphalt {
+    border-color: #34495e;
+    background-color: #46627f;
+    color: #fff
+}
+
+.box.charcoal {
+    border-color: #383636;
+    background-color: #524f4f;
+    color: #fff
+}
+
+.box.white {
+    border-color: #fff;
+    background-color: #fff;
+    color: #111
+}
+
+.box.black {
+    border-color: #111;
+    background-color: #2b2b2b;
+    color: #fff
+}
+
+    .truncate {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis
+    }
+        .box p {
+            padding-left: 10px;
+            padding-right: 10px
+        }
+
+            .box img {
+                padding: 0;
+                margin: -16px 0 15px 0
+
+            }
